@@ -2,8 +2,12 @@ function hide(id) {
   document.getElementById(id).style.display = "none";
 }
 
+function show(id) {
+  document.getElementById(id).style.display = "block";
+}
+
 function showHomePage() {
-  document.getElementById("home").style.display = "block";
+  show("home");
   hide("skills");
   hide("education");
   hide("work");
@@ -12,7 +16,7 @@ function showHomePage() {
 }
 showHomePage();
 function showSkillsPage() {
-  document.getElementById("skills").style.display = "block";
+  show("skills");
   hide("home");
   hide("education");
   hide("work");
@@ -21,7 +25,7 @@ function showSkillsPage() {
 }
 
 function showEducationPage() {
-  document.getElementById("education").style.display = "block";
+  show("education");
   hide("home");
   hide("skills");
   hide("work");
@@ -30,7 +34,7 @@ function showEducationPage() {
 }
 
 function showWorkPage() {
-  document.getElementById("work").style.display = "block";
+  show("work");
   hide("home");
   hide("skills");
   hide("education");
@@ -39,7 +43,7 @@ function showWorkPage() {
 }
 
 function showLicensesPage() {
-  document.getElementById("licenses").style.display = "block";
+  show("licenses");
   hide("home");
   hide("skills");
   hide("education");
@@ -48,7 +52,7 @@ function showLicensesPage() {
 }
 
 function showLanguagesPage() {
-  document.getElementById("languages").style.display = "block";
+  show("languages");
   hide("home");
   hide("skills");
   hide("education");

@@ -47,10 +47,24 @@ fetch("skills.json")
 //better to gave function to do specific things
 //get the skills from outside and the print them
 function printSkills(skills) {
+  skills = sortSkillsByEndorcements(skills);
   var skillsMapResult = skills.map(function (skill) {
     var cls = skill.favorite ? "favorite" : "";
     console.info("inside map", cls, skill);
     return `<li class = "${cls}">${skill.name} <span> - ${skill.endorcements}</span></li>`;
   });
   $("#skills ul").innerHTML = skillsMapResult.join("");
+}
+
+function sortSkillsByEndorcements(skills) {
+  return skills.sort(function (a, b) {
+    console.log(a, b);
+    return b.endorcements - a.endorcements;
+  });
+}
+
+function sortSkillsByName(skills) {
+  return skills.sort(function (a, b) {
+    return a.name.localeCompare(b.name);
+  });
 }

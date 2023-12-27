@@ -1,4 +1,4 @@
-var activePage = "home";
+var activePage = "skills";
 
 function $(selector) {
   return document.querySelector(selector);
@@ -30,3 +30,21 @@ $("#top-menu-bar").addEventListener("click", function (e) {
     showPage(id);
   }
 });
+//querySelector
+//use array.map to create skills list
+var skills = [
+  "HTML",
+  "CSS",
+  "Java",
+  "javaScript",
+  "Cucumber",
+  "Selenium",
+  "Jira",
+  "TestRail",
+];
+var skillsMapResult = skills.map(function (skill) {
+  console.info("inside map", skill);
+  return `<li>${skill}</li>`;
+});
+//console.warn("result", skillsMapResult);
+$("#skills ul").innerHTML = skillsMapResult.join("");

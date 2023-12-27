@@ -14,6 +14,9 @@ form {
 .form-row label {
   font-weight: bold;
 }
+#skills li span {
+  color: green;
+}
 
 .form-row input,
 .form-row textarea {
@@ -130,7 +133,7 @@ p {
 }
 
 .favorite {
-  color: black;
+  color: red;
 }
 
 #top-menu-bar {

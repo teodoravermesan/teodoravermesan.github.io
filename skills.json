@@ -1,0 +1,11 @@
+[
+  { "name": "HTML", "endorcements": 1, "favorite": true },
+  { "name": "CSS", "endorcements": 1 },
+  { "name": "Java", "endorcements": 5 },
+  { "name": "JavaScript", "endorcements": 1, "favorite": true },
+  { "name": "Cucumber", "endorcements": 5 },
+  { "name": "Selenium", "endorcements": 5 },
+  { "name": "Jira", "endorcements": 5 },
+  { "name": "TestRail", "endorcements": 5 },
+  { "name": "Git", "endorcements": 3 }
+]

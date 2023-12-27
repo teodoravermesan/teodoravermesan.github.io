@@ -32,19 +32,25 @@ $("#top-menu-bar").addEventListener("click", function (e) {
 });
 //querySelector
 //use array.map to create skills list
-var skills = [
-  "HTML",
-  "CSS",
-  "Java",
-  "javaScript",
-  "Cucumber",
-  "Selenium",
-  "Jira",
-  "TestRail",
-];
-var skillsMapResult = skills.map(function (skill) {
-  console.info("inside map", skill);
-  return `<li>${skill}</li>`;
-});
-//console.warn("result", skillsMapResult);
-$("#skills ul").innerHTML = skillsMapResult.join("");
+fetch("skills.json")
+  .then(function (response) {
+    //transform the response into jason
+    console.info("done?");
+    return response.json();
+  })
+  //the data is transform then the function is transformed
+  .then(function (skills) {
+    //call the function to print skills
+    printSkills(skills);
+  });
+
+//better to gave function to do specific things
+//get the skills from outside and the print them
+function printSkills(skills) {
+  var skillsMapResult = skills.map(function (skill) {
+    var cls = skill.favorite ? "favorite" : "";
+    console.info("inside map", cls, skill);
+    return `<li class = "${cls}">${skill.name} <span> - ${skill.endorcements}</span></li>`;
+  });
+  $("#skills ul").innerHTML = skillsMapResult.join("");
+}

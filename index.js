@@ -1,3 +1,5 @@
+var activePage = "home";
+
 function hide(id) {
   document.getElementById(id).style.display = "none";
 }
@@ -7,59 +9,41 @@ function show(id) {
 }
 
 function showHomePage() {
+  hide(activePage);
   show("home");
-  hide("skills");
-  hide("education");
-  hide("work");
-  hide("licenses");
-  hide("languages");
+  activePage = "home";
 }
-showHomePage();
 function showSkillsPage() {
+  console.log("activePage", activePage);
+  hide(activePage);
   show("skills");
-  hide("home");
-  hide("education");
-  hide("work");
-  hide("licenses");
-  hide("languages");
+  activePage = "skills";
 }
 
 function showEducationPage() {
+  hide(activePage);
   show("education");
-  hide("home");
-  hide("skills");
-  hide("work");
-  hide("licenses");
-  hide("languages");
+  activePage = "education";
 }
 
 function showWorkPage() {
+  hide(activePage);
   show("work");
-  hide("home");
-  hide("skills");
-  hide("education");
-  hide("licenses");
-  hide("languages");
+  activePage = "work";
 }
 
 function showLicensesPage() {
+  hide(activePage);
   show("licenses");
-  hide("home");
-  hide("skills");
-  hide("education");
-  hide("work");
-  hide("languages");
+  activePage = "licenses";
 }
 
 function showLanguagesPage() {
+  hide(activePage);
   show("languages");
-  hide("home");
-  hide("skills");
-  hide("education");
-  hide("licenses");
-  hide("work");
+  activePage = "languages";
 }
-
+showHomePage();
 var homeLink = document.querySelectorAll("#top-menu-bar a")[0];
 homeLink.addEventListener("click", showHomePage);
 

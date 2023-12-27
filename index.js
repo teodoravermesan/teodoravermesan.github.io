@@ -1,55 +1,58 @@
+function hide(id) {
+  document.getElementById(id).style.display = "block";
+}
+
 function showHomePage() {
   document.getElementById("home").style.display = "block";
-  document.getElementById("skills").style.display = "none";
-  document.getElementById("education").style.display = "none";
-  document.getElementById("work").style.display = "none";
-  document.getElementById("licenses").style.display = "none";
-  document.getElementById("languages").style.display = "none";
+  hide("skills");
+  hide("education");
+  hide("work");
+  hide("languages");
 }
 showHomePage();
 function showSkillsPage() {
-  document.getElementById("home").style.display = "none";
   document.getElementById("skills").style.display = "block";
-  document.getElementById("education").style.display = "none";
-  document.getElementById("work").style.display = "none";
-  document.getElementById("licenses").style.display = "none";
-  document.getElementById("languages").style.display = "none";
+  hide("home");
+  hide("education");
+  hide("work");
+  hide("licenses");
+  hide("languages");
 }
 
 function showEducationPage() {
-  document.getElementById("home").style.display = "none";
-  document.getElementById("skills").style.display = "none";
   document.getElementById("education").style.display = "block";
-  document.getElementById("work").style.display = "none";
-  document.getElementById("licenses").style.display = "none";
-  document.getElementById("languages").style.display = "none";
+  hide("home");
+  hide("skills");
+  hide("work");
+  hide("licenses");
+  hide("languages");
 }
 
 function showWorkPage() {
-  document.getElementById("home").style.display = "none";
-  document.getElementById("skills").style.display = "none";
-  document.getElementById("education").style.display = "none";
   document.getElementById("work").style.display = "block";
-  document.getElementById("licenses").style.display = "none";
-  document.getElementById("languages").style.display = "none";
+  hide("home");
+  hide("skills");
+  hide("education");
+  hide("licenses");
+  hide("languages");
 }
 
 function showLicensesPage() {
-  document.getElementById("home").style.display = "none";
-  document.getElementById("skills").style.display = "none";
-  document.getElementById("education").style.display = "none";
-  document.getElementById("work").style.display = "none";
   document.getElementById("licenses").style.display = "block";
-  document.getElementById("languages").style.display = "none";
+  hide("home");
+  hide("skills");
+  hide("education");
+  hide("licenses");
+  hide("languages");
 }
 
 function showLanguagesPage() {
-  document.getElementById("home").style.display = "none";
-  document.getElementById("skills").style.display = "none";
-  document.getElementById("education").style.display = "none";
-  document.getElementById("work").style.display = "none";
-  document.getElementById("licenses").style.display = "none";
   document.getElementById("languages").style.display = "block";
+  hide("home");
+  hide("skills");
+  hide("education");
+  hide("licenses");
+  hide("work");
 }
 
 var homeLink = document.querySelectorAll("#top-menu-bar a")[0];

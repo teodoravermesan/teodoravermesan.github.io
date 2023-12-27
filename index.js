@@ -1,5 +1,5 @@
 function hide(id) {
-  document.getElementById(id).style.display = "block";
+  document.getElementById(id).style.display = "none";
 }
 
 function showHomePage() {
@@ -7,6 +7,7 @@ function showHomePage() {
   hide("skills");
   hide("education");
   hide("work");
+  hide("licenses");
   hide("languages");
 }
 showHomePage();
@@ -42,7 +43,7 @@ function showLicensesPage() {
   hide("home");
   hide("skills");
   hide("education");
-  hide("licenses");
+  hide("work");
   hide("languages");
 }
 

@@ -1,28 +1,29 @@
 var activePage = "home";
 
+function $(selector) {
+  return document.querySelector(selector);
+}
+//simple concatanation
 function hide(id) {
-  document.getElementById(id).style.display = "none";
+  $("#" + id).style.display = "none";
 }
 
+//string template
 function show(id) {
-  document.getElementById(id).style.display = "block";
+  $(`#${id}`).style.display = "block";
 }
 
 function showPage(id) {
   hide(activePage);
-  document
-    .querySelector(`#top-menu-bar a[data-page="${activePage}"]`)
-    .classList.remove("active");
+  $(`#top-menu-bar a[data-page="${activePage}"]`).classList.remove("active");
   show(id);
-  document
-    .querySelector(`#top-menu-bar a[data-page="${id}"]`)
-    .classList.add("active");
+  $(`#top-menu-bar a[data-page="${id}"]`).classList.add("active");
   activePage = id;
 }
 
 showPage(activePage);
 
-document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
+$("#top-menu-bar").addEventListener("click", function (e) {
   var id = e.target.dataset.page;
   console.info("Click on", id);
   if (id) {

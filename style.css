@@ -23,14 +23,17 @@ body {
   flex-direction: column;
 }
 
-#languages table {
+#languages table,
+#experience table {
   width: 50%;
   min-width: 330px;
   border-collapse: collapse;
 }
 
 #languages table th,
-#languages table td {
+#languages table td,
+#experience th,
+#experience td {
   border: 1px solid #0798ab;
   padding: 5px;
 }

@@ -1,4 +1,4 @@
-let activePage = "skills";
+let activePage = "languages";
 
 function $(selector) {
   return document.querySelector(selector);
@@ -22,7 +22,7 @@ function showPage(id) {
 function initEvents() {
   $("#top-menu-bar").addEventListener("click", (e) => {
     const id = e.target.dataset.page;
-    console.info("Click on", id);
+    //console.info("Click on", id);
     if (id) {
       showPage(id);
     }
@@ -30,10 +30,7 @@ function initEvents() {
 }
 function loadSkills() {
   fetch("skills.json")
-    .then((response) => {
-      console.info("done?");
-      return response.json();
-    })
+    .then((response) => response.json())
     .then((skills) => {
       printSkills(skills);
     });
@@ -43,23 +40,18 @@ function printSkills(skills) {
   skills = sortSkillsByEndorcements(skills);
   const skillsMapResult = skills.map((skill) => {
     const cls = skill.favorite ? "favorite" : "";
-    console.info("inside map", cls, skill);
+    //console.info("inside map", cls, skill);
     return `<li class = "${cls}">${skill.name} <span> - ${skill.endorcements}</span></li>`;
   });
   $("#skills ul").innerHTML = skillsMapResult.join("");
 }
 
 function sortSkillsByEndorcements(skills) {
-  return skills.sort((a, b) => {
-    console.log(a, b);
-    return b.endorcements - a.endorcements;
-  });
+  return skills.sort((a, b) => b.endorcements - a.endorcements);
 }
 
 function sortSkillsByName(skills) {
-  return skills.sort((a, b) => {
-    return a.name.localeCompare(b.name);
-  });
+  return skills.sort((a, b) => a.name.localeCompare(b.name));
 }
 showPage(activePage);
 initEvents();

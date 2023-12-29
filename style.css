@@ -23,22 +23,23 @@ body {
   flex-direction: column;
 }
 
-#languages table,
-#experience table {
+table {
   width: 50%;
   min-width: 330px;
   border-collapse: collapse;
 }
 
-#languages table th,
-#languages table td,
-#experience td {
+th,
+td {
   border: 1px solid #0798ab;
-  padding: 5px;
+  padding: 8px;
+  color: black;
+  font-weight: normal;
 }
 
 th {
   background: #d1e7ea;
+  font-weight: bold;
 }
 
 #skills li span {

@@ -10,115 +10,18 @@ body {
   flex-direction: column;
 }
 
-#content {
-  flex: 2;
-  display: flex;
-  flex-direction: row;
-}
-
-#main {
-  flex: 4;
-  padding: 10px 10px 5px 5px;
-  display: flex;
-  flex-direction: column;
-}
-
-table {
-  width: 50%;
-  min-width: 330px;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  border: 1px solid #0798ab;
-  padding: 8px;
-  color: black;
-  font-weight: normal;
-}
-
-th {
-  background: #d1e7ea;
-  font-weight: bold;
-}
-
-#skills li span {
-  color: green;
-}
-
-p {
-  color: black;
-}
-
-.center {
-  text-align: center;
-  margin-right: 30px;
-  margin-left: 30px;
-  margin-top: 10px;
-}
-
-#my-picture {
-  padding: 2px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-left: 40px;
-}
-
-#my-picture img {
-  border-radius: 10%;
-  border: 3px solid white;
-}
-
-#job-title {
-  color: rgb(0, 94, 255);
-  text-align: left;
-}
-
-.page {
-  display: none;
-  flex: 30;
-  background-color: #ffffff;
-  margin: 30px 30px 40px 30px;
-  padding: 30px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-}
-
-.page > h2,
-.page > h3 {
-  margin: 0 0 10px 0;
-  color: #057988;
-}
-.page h3 {
-  margin-top: 20px;
-}
-
-.favorite {
-  color: red;
-}
-
-h2 {
-  display: block;
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
+header {
+  position: sticky;
+  background: white;
+  top: 0;
+  padding: 0;
 }
 
 #header-wrapper {
-  min-height: 120px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: relative;
-  max-width: var(--max-width);
-  width: 100%;
-  margin: 0 auto;
-}
 
-header {
   background: linear-gradient(45deg, #0761ab99, transparent);
 }
 
@@ -168,6 +71,30 @@ header {
   background-color: #057988;
 }
 
+#my-picture {
+  padding: 2px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 40px;
+}
+
+#my-picture img {
+  border-radius: 10%;
+  border: 3px solid white;
+}
+
+#job-title {
+  color: #055c88;
+  text-align: left;
+  font-weight: bold;
+}
+
+#content {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
+
 #side-menu {
   flex: 1;
   padding: 10px 5px 5px 10px;
@@ -194,7 +121,7 @@ form {
 }
 
 .form-row {
-  padding: 4px 0;
+  padding: 6px 0;
 }
 
 .form-row label {
@@ -229,20 +156,78 @@ form {
   display: inline-block;
 }
 
-.rubik-face {
-  background-color: #0d0d0d;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  max-width: 200px;
-  padding: 4px;
-  grid-gap: 4px;
+#main {
+  flex: 4;
+  padding: 10px 10px 5px 5px;
+  display: flex;
+  flex-direction: column;
 }
 
-.rubik-face > div {
-  border: 1px solid #0d0d0d33;
-  padding-top: 100%;
-  background-color: white;
-  border-radius: 0.2em;
+table {
+  width: 50%;
+  min-width: 330px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #0798ab;
+  padding: 8px;
+  color: black;
+  font-weight: normal;
+}
+
+th {
+  background: #d1e7ea;
+  font-weight: bold;
+}
+
+#skills li span {
+  color: green;
+}
+
+p {
+  color: black;
+}
+
+.center {
+  text-align: center;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.page {
+  display: none;
+  flex: 30;
+  background-color: #ffffff;
+  margin: 30px 30px 40px 30px;
+  padding: 30px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.page > h2,
+.page > h3 {
+  margin: 0 0 10px 0;
+  color: #057988;
+}
+.page h3 {
+  margin-top: 20px;
+}
+
+.favorite {
+  color: red;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 #footer-menu-bar {
@@ -258,7 +243,6 @@ form {
   position: fixed;
   bottom: 0;
   width: 100%;
-  left: 0;
 }
 
 #footer-menu-bar li {

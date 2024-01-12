@@ -164,14 +164,17 @@ form {
 }
 
 table {
-  width: 50%;
+  width: 70%;
   min-width: 330px;
   border-collapse: collapse;
+  /* center table */
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 th,
 td {
-  border: 1px solid #0798ab;
+  border: 2px solid #0798ab;
   padding: 8px;
   color: black;
   font-weight: normal;

@@ -1,5 +1,3 @@
-# teodoravermesan.github.io
-
 <!-- simple concatanation
 function hide(id) {
   $("#" + id).style.display = "none";
@@ -64,3 +62,5 @@ function initEvents() {
     }
   });
 } -->
+
+[Check my online CV ](https://teodoravermesan.github.io/)
